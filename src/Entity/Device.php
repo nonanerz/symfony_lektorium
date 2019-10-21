@@ -37,44 +37,33 @@ class Device
      */
     private $user;
 
-    /**
-     * @return mixed
-     */
-    public function getId()
+    public function getId(): ?int
     {
         return $this->id;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getPlatform()
+    public function getPlatform(): ?string
     {
         return $this->platform;
     }
 
-    /**
-     * @param mixed $platform
-     */
-    public function setPlatform($platform): void
+    public function setPlatform(string $platform): self
     {
         $this->platform = $platform;
+
+        return $this;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getBrand()
+    public function getBrand(): ?string
     {
         return $this->brand;
     }
 
-    /**
-     * @param mixed $brand
-     */
-    public function setBrand($brand): void
+    public function setBrand(string $brand): self
     {
         $this->brand = $brand;
+
+        return $this;
     }
 
     public function getUser(): ?User
@@ -88,5 +77,6 @@ class Device
 
         return $this;
     }
+
 
 }
